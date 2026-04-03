@@ -78,7 +78,7 @@ python examples/tasks_airbot_play/piper_place_block_random.py --data_set_size 50
 > 이 단계는 **LeRobot 서버가 먼저 떠 있어야** 함
 > (LeRobot 서버 실행은 `shinmyungji/lerobot-ws-piper-place` README 참고)
 
-### 4-1) RAW 이미지 전송
+### RAW 이미지 전송
 
 ```bash
 cd "$DISCOVERSE_DIR"
@@ -92,22 +92,7 @@ python examples/tasks_airbot_play/piper_place_block_random_eval.py \
   --image_transport raw
 ```
 
-> **팁**  
-> RAW는 압축 손실/인코딩 이슈가 적어서 디버깅이 쉬워요. 성능/대역폭 튜닝은 나중에 JPEG로 바꾸면 됩니다.
 
-### 4-2) JPEG 이미지 전송
-
-```bash
-cd "$DISCOVERSE_DIR"
-
-python examples/tasks_airbot_play/piper_place_block_random_eval.py \
-  --num_eval_episodes 10 --max_steps 350 \
-  --policy_server tcp://127.0.0.1:5555 \
-  --demo_like --demo_action_repeat 3 \
-  --demo_hold_wait_s 0.6 --demo_grip_close_thresh 0.016 --demo_move_speed 0.75 \
-  --print_every 10 \
-  --image_transport jpeg
-```
 
 
 ---
