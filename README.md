@@ -108,7 +108,7 @@ conda activate discoverse
 cd "$DISCOVERSE_DIR"
 ```
 
--
+
 ```
 
 ###  RAW 전송 eval
@@ -127,6 +127,3 @@ python examples/tasks_airbot_play/piper_place_block_random_eval.py \
 ---
 
 
-
-
-대용량 모델/데이터를 레포에 그대로 올리면 push가 막히거나 레포가 무거워져서 “클론 후 실행” 경험이 나빠집니다.
