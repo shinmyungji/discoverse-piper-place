@@ -1,5 +1,4 @@
 # DISCOVERSE Piper Block Place + LeRobot ZMQ Policy Server 전체 실행 가이드
-
 ---
 
 
@@ -74,14 +73,6 @@ python policy_server_zmq_task.py \
   --device cuda
 ```
 
-(옵션) CPU로 실행하려면:
-
-```bash
-python policy_server_zmq_task.py \
-  --model_path "$MODEL_DIR" \
-  --bind tcp://127.0.0.1:5555 \
-  --device cpu
-```
 
 
 
