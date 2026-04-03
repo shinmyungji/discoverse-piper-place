@@ -1,0 +1,6 @@
+name: discoverse
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /home/qwer1234/miniconda3/envs/discoverse

@@ -1,0 +1,6 @@
+# 核心依赖
+PyQt5>=5.15.0
+PyOpenGL>=3.1.0
+PyOpenGL_accelerate>=3.1.0
+numpy>=1.20.0
+scipy>=1.7.0

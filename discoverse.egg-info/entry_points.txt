@@ -1,0 +1,2 @@
+[console_scripts]
+discoverse-check = check_installation:main

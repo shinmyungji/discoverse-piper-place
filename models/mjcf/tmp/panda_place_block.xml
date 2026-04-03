@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<mujoco model="panda_place_block">
+  <option integrator="implicitfast"/>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/franka_emika_panda/panda_dependencies.xml"/>
+  <actuator>
+    <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/franka_emika_panda/panda_control.xml"/>
+  </actuator>
+  <sensor>
+    <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/franka_emika_panda/panda_sensor.xml"/>
+  </sensor>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/object/bowl_dependencies.xml"/>
+  <compiler angle="radian" meshdir="/home/qwer1234/robotics/DISCOVERSE/models/meshes" texturedir="/home/qwer1234/robotics/DISCOVERSE/models/meshes" autolimits="true"/>
+  <worldbody>
+    <body name="panda_pose" pos="0.3 1. 0.71" euler="0 0 3.1416">
+      <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/franka_emika_panda/panda.xml"/>
+    </body>
+    <body name="block_green" pos="0 0.85 0.7145">
+      <joint type="free" frictionloss="0.00001"/>
+      <inertial pos="0 0 0" mass="0.001" diaginertia="1e-7 1e-7 1e-7"/>
+      <geom rgba="0.21 0.36 0.21 1" size="0.0145 0.0145 0.0145" type="box" class="obj_collision" group="1"/>
+    </body>
+    <body name="bowl_pink" pos="0 1.03 0.6988">
+      <joint type="free" frictionloss="0.00001"/>
+      <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/object/bowl_pink.xml"/>
+    </body>
+  </worldbody>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/scene/qz_lab3.xml"/>
+  <keyframe>
+    <key name="home" qpos="0.0 0.0 0.0 -1.57079 0.0 1.57079 0.7853 0.04 0.04 0.0 0.85 0.7145 1.0 0.0 0.0 0.0 0.0 1.03 0.6988 1.0 0.0 0.0 0.0 0.0 0.0" ctrl="0 0 0 -1.57079 0 1.57079 0.7853 0.04"/>
+  </keyframe>
+</mujoco>

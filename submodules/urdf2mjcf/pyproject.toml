@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "urdf2mjcf"
+dynamic = ["version"]
+description = "Convert URDF to MJCF with advanced mesh processing"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Yufei Jia", email = "jyf23@mails.tsinghua.edu.cn"}
+]
+keywords = ["urdf", "mjcf", "mujoco", "robotics", "simulation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mujoco>=3.3.2",
+    "numpy",
+    "pydantic",
+    "scipy",
+    "coacd",
+    "trimesh",
+    "fast-simplification",
+    "pillow",
+    "pymeshlab"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "ruff",
+    "mypy",
+]
+
+[project.urls]
+Homepage = "https://github.com/TATP-233/urdf2mjcf"
+Repository = "https://github.com/TATP-233/urdf2mjcf"
+Issues = "https://github.com/TATP-233/urdf2mjcf/issues"
+
+[project.scripts]
+urdf2mjcf = "urdf2mjcf.convert:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["urdf2mjcf*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "urdf2mjcf.__version__"}
+
+[tool.black]
+line-length = 120
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = [
+    "E501",  # Line too long (handled by black)
+    "N812",  # Lowercase imported as non-lowercase
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = [
+    "trimesh.*",
+    "coacd.*",
+]
+ignore_missing_imports = true

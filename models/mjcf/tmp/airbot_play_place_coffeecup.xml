@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<mujoco model="airbot_play_place_coffeecup">
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/airbot_play/airbot_play_dependencies.xml"/>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/airbot_play/airbot_play_appendix.xml"/>
+  <actuator>
+    <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/airbot_play/airbot_play_control.xml"/>
+  </actuator>
+  <sensor>
+    <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/airbot_play/airbot_play_sensor.xml"/>
+  </sensor>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/object/coffeecup_dependencies.xml"/>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/object/plate_white_dependencies.xml"/>
+  <compiler angle="radian" meshdir="/home/qwer1234/robotics/DISCOVERSE/models/meshes" texturedir="/home/qwer1234/robotics/DISCOVERSE/models/meshes" autolimits="true"/>
+  <worldbody>
+    <body name="airbot_play_pose" pos="0.3 1. 0.71" euler="0 0 3.1416">
+      <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/manipulator/airbot_play/airbot_play.xml"/>
+    </body>
+    <body name="coffeecup_white" pos="-0.2 1.03 0.700422" quat="0.707 0 0 -0.707">
+      <joint type="free" frictionloss="0.00005"/>
+      <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/object/coffeecup_white.xml"/>
+    </body>
+    <body name="plate_white" pos="-0.0667474 0.825 0.714159">
+      <joint type="free" frictionloss="0.00005"/>
+      <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/object/plate_white.xml"/>
+    </body>
+  </worldbody>
+  <include file="/home/qwer1234/robotics/DISCOVERSE/models/mjcf/scene/qz_lab3.xml"/>
+  <keyframe>
+    <key name="home" qpos="0.0 -1.0 1.2 1.5708 -1.2 -1.5708 0.0 0.0 -0.2 1.03 0.700422 0.7071067811865476 0.0 0.0 -0.7071067811865476 -0.0667474 0.825 0.714159 1.0 0.0 0.0 0.0 0.0 0.0" ctrl="0 -1 1.2 1.5708 -1.2 -1.5708 0"/>
+  </keyframe>
+</mujoco>

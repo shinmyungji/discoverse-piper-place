@@ -1,0 +1,26 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# logs
+runs/
+wandb/
+logs/
+*.log
+
+# datasets / recordings / videos (생성물)
+data/
+datasets/
+recordings/
+videos/
+*.mp4
+
+# mujoco generated artifacts
+*.mjb
+mjcf/tmp/
+
+# OS
+.DS_Store
