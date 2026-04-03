@@ -16,7 +16,7 @@ conda activate discoverse
 
 ---
 
-## 2) (터미널 1) 랜덤 데모 데이터 500개 생성
+## 2) 랜덤 데모 데이터 500개 생성
 
 ```bash
 cd "$DISCOVERSE_DIR"
@@ -27,7 +27,7 @@ python examples/tasks_airbot_play/piper_place_block_random.py --data_set_size 50
 
 ---
 
-## 3) (터미널 2) LeRobot 환경 진입 + 데이터 변환
+## 3) LeRobot 환경 진입 + 데이터 변환
 
 새 터미널(터미널 2)에서:
 
