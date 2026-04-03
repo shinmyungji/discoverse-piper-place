@@ -7,7 +7,7 @@ DISCOVERSE 시뮬레이션에서 **Piper로 block place** 작업을 수행.
 
 ---
 
-## TL;DR (가장 빠른 실행)
+## 
 
 ```bash
 export DISCOVERSE_DIR=~/robotics/discoverse-piper-place
