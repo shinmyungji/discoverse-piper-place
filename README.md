@@ -2,17 +2,7 @@
 
 ---
 
-## 0) 폴더/경로 전제 (권장)
 
-- DISCOVERSE 레포(너가 올린 GitHub): `~/robotics/discoverse-piper-place`
-- LeRobot 작업 폴더(로컬): `~/lerobot_ws`
-
-아래 2개를 먼저 환경변수로 고정하면, 절대경로 실수 없이 재현됨
-
-```bash
-export DISCOVERSE_DIR=~/robotics/discoverse-piper-place
-export LEROBOT_WS_DIR=~/lerobot_ws
-```
 
 
 ---
